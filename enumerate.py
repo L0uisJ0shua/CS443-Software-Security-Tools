@@ -31,20 +31,15 @@ subprocess.call("cat /etc/*-release", shell=True)
 print("\n--------------------------------\n")
 print("User Information:")
 try:
-    user = subprocess.check_output(
-        "whoami", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
-    userid = subprocess.check_output(
-        "id", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
-    path = subprocess.check_output(
-        "echo $PATH", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
-    term = subprocess.check_output(
-        "echo $TERM", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
-    shell = subprocess.check_output(
-        "echo $SHELL", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
+   user = subprocess.check_output("whoami", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
+   userid = subprocess.check_output("id", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
+   path = subprocess.check_output("echo $PATH", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
+   term = subprocess.check_output("echo $TERM", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
+   shell = subprocess.check_output("echo $SHELL", shell=True, stderr=subprocess.STDOUT).decode("utf-8").strip()
 
 except subprocess.CalledProcessError:
-    print("Execution of '%s' failed!") % cmd
-    sys.exit(1)
+   print("Execution of '%s' failed!") % cmd
+   sys.exit(1)
 
 
 print("Currently logged in as: ")
@@ -64,3 +59,6 @@ subprocess.call("netstat -tulpn | grep LISTEN", shell=True)
 print("\n----------------------------------\n")
 
 print("Done")
+
+
+
