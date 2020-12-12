@@ -6,7 +6,7 @@ print """
 This tool is used to whack format string vulnerability in the way DBG would set his exercises. Asssuming that he will be reading from a file, this python script takes
 in the necessary value and outputs a file according to the name we want the file to be which will be use as the input file to the vulnerable program
 
-Author: Low Louis, Benjamin Wong
+Author: @L0uisJ0shua , @benjaminwongweien
 
 Use at your own risk.
 
